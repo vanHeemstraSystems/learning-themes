@@ -463,7 +463,7 @@ tree = ({
           group: "automation",
           description:
             "About Another Automation.",
-          url: "https://transparency.twitter.com/en/information-requests.html",
+          url: "https://www.google.com",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         },
@@ -506,7 +506,7 @@ tree = ({
     },
     {
       title: "C: CI/CD",
-      _link: "https://interactive.twitter.com/candidateRace16/",
+      _link: "https://vanheemstrasystems.github.io/learning-ci-cd",
       group: "ci-cd",
       description:
         "This interactive was published leading up to the 2016 election, and updated regularly.  Initially, it shows candidates ranked by buzz on Twitter and indicates when each candidate dropped out of the race.  If you mouse over the primaries and debates you can see who participated in which.",
@@ -514,12 +514,12 @@ tree = ({
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "A Proportional View",
+          title: "GitHub Actions",
           _link:
-            "https://interactive.twitter.com/candidateRace16/?metric=proportion&state=AR&status=active",
+            "https://vanheemstrasystems.github.io/learning-github-actions",
           group: "ci-cd",
           description:
-            "The UI provides filters, selectors, and the option to animate the race.  Shown here are how the final three candidates fared in Arkansas, proportionally, rather than by rank.",
+            "About GitHub Actions.",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -529,9 +529,31 @@ tree = ({
       title: "D: Containerisation",
       group: "containerisation",
       description:
-        "This chart shows the flow between different segments of Twitter users.  This internal tool was used to measure the health of various markets.  In this view, the numbers on the edges show the difference from one time period to the next.  It was also possible to show the difference between two countries to measure relative health.  The color-coding on the edges highlight segments which are in trouble.",
+        "About Containerisation.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
+      children: [
+        {
+          title: "Docker",
+          _link:
+            "https://vanheemstrasystems.github.io/learning-docker",
+          group: "ci-cd",
+          description:
+            "About Docker.",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
+        },
+        {
+          title: "Kubernetes",
+          _link:
+            "https://vanheemstrasystems.github.io/learning-kubernetes",
+          group: "ci-cd",
+          description:
+            "About Kubernetes.",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
+        }
+      ]  
     },
     {
       title: "E: Computing",
@@ -542,20 +564,20 @@ tree = ({
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "Twitter New Year's Eve 2012",
+          title: "Cloud Computing",
           group: "computing",
           link:
-            "https://blog.twitter.com/official/en_us/a/2013/celebrating-2013-in-the-global-town-square.html",
+            "https://vanheemstrasystems.github.io/learning-cloud-computing",
           description:
-            'This static visualization overlays the tweets per second during New Year’s Day 2012 on a globe centered on the north pole.  It is arranged such that each "midnight spike" is aligned with the geography from which those tweets would likely come.  It was discussed here on Reddit\'s [Data Is Beautiful](https://www.reddit.com/r/dataisbeautiful/comments/15u2jy/tweets_per_second_on_nye_around_the_globe/).  I wish I had chosen better colors.',
+            'About Cloud Computing.',
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         },
         {
-          title: "Live Geographic Aggregation",
+          title: "Foo",
           group: "computing",
           description:
-            "Here recent tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html) were grouped by hashtag or @handle, then rendered onto an ever zooming, scaling map.  Sporting events, conferences, earthquakes, and even rainbows would be highlighted.  A small time-series plot at the top of the screen showed the event trend.",
+            "About Foo.",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -564,40 +586,49 @@ tree = ({
     {
       title: "F: Infrastructure-as-Code",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-infrastructure-as-code",
       group: "infrastructure-as-code",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Infrastructure-as-Code.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "Ansible",
           group: "infrastructure-as-code",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About Ansible.",
+          link: "https://vanheemstrasystems.github.io/learning-ansible",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
-        }
+        },
+        {
+          title: "Terraform",
+          group: "infrastructure-as-code",
+          description:
+            "About Terraform.",
+          link: "https://vanheemstrasystems.github.io/learning-terraform",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
+        }        
       ]
     },
     {
       title: "G: Pipelines",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-pipelines",
       group: "pipelines",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Pipelines.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "n8n",
           group: "pipelines",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About n8n.",
+          link: "https://vanheemstrasystems.github.io/learning-n8n",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -606,19 +637,19 @@ tree = ({
     {
       title: "H: Process Mining",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-process-mining",
       group: "process-mining",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Process Mining.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "RapidMiner",
           group: "process-mining",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About RapidMiner.",
+          link: "https://vanheemstrasystems.github.io/learning-rapidminer",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -627,19 +658,19 @@ tree = ({
     {
       title: "I: Programming",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-programming",
       group: "programming",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Programming.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "JavaScript",
           group: "programming",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About JavaScript.",
+          link: "https://vanheemstrasystems.github.io/learning-javascript",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -648,19 +679,19 @@ tree = ({
     {
       title: "J: Security",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-security",
       group: "security",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Security.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "Cloud Security",
           group: "security",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About Cloud Security.",
+          link: "https://vanheemstrasystems.github.io/learning-cloud-security",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -669,19 +700,19 @@ tree = ({
     {
       title: "K: Testing",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-testing",
       group: "testing",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Testing.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "Test-Driven Development",
           group: "testing",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About Test-Driven Development.",
+          link: "https://vanheemstrasystems.github.io/learning-test-driven-development",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -690,19 +721,19 @@ tree = ({
     {
       title: "L: Value-Chain Management",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-value-chain-management",
       group: "value-chain-management",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Value-Chain Management.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "Foo",
           group: "value-chain-management",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About Foo.",
+          link: "https://www.google.com",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
@@ -711,19 +742,19 @@ tree = ({
     {
       title: "M: Workflow Management",
       link:
-        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+        "https://vanheemstrasystems.github.io/learning-workflow-management",
       group: "workflow-management",
       description:
-        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+        'About Workflow Management.',
       img:
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
-          title: "With Cats",
+          title: "Foo",
           group: "workflow-management",
           description:
-            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
-          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+            "About Foo.",
+          link: "https://www.google.com",
           img:
             "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
