@@ -194,9 +194,154 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is a Quarto website.</p>
 <p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="10" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 9;"><span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`### Themes`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="10" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 9;"><span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>__page <span class="op">=</span> <span class="fu">hostedOnThumbtools</span>()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> <span class="fu">pageRenderer</span>(graphData<span class="op">,</span> width<span class="op">,</span> height<span class="op">,</span> <span class="kw">false</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> <span class="fu">pageRenderer</span>(graphData<span class="op">,</span> width<span class="op">,</span> <span class="dv">800</span><span class="op">,</span> <span class="kw">true</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-1" data-nodetype="expression">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="17" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 16;"><span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>viewof linkColor <span class="op">=</span> <span class="fu">color</span>({</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"#aaaaaa"</span><span class="op">,</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Link Color"</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="25" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 24;"><span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>viewof backgroundColor <span class="op">=</span> <span class="fu">color</span>({</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">// value: d3.color("rgb(253, 242, 208)").hex(),</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"#fff7e0"</span><span class="op">,</span> <span class="co">// "#f7f7f7", //"#f2f0e6",</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Background Color"</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="34" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 33;"><span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>depthSizeScale <span class="op">=</span> d3</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">scalePow</span>()</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">exponent</span>(<span class="fl">0.7</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> maxDepth])</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="fl">0.6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="43" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 42;"><span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>strokeWidth <span class="op">=</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="48" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 47;"><span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>imageSize <span class="op">=</span> <span class="dv">140</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="53" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 52;"><span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>depthThickScale <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()<span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> maxDepth <span class="op">-</span> <span class="dv">1</span>])<span class="op">.</span><span class="fu">range</span>([<span class="dv">10</span><span class="op">,</span> <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="58" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 57;"><span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>pageRenderer <span class="op">=</span> (data<span class="op">,</span> width<span class="op">,</span> height<span class="op">,</span> isTest <span class="op">=</span> <span class="kw">false</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> svg <span class="op">=</span> DOM<span class="op">.</span><span class="fu">svg</span>(width<span class="op">,</span> height)<span class="op">;</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(svg)</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">'width'</span><span class="op">,</span> <span class="st">'100%'</span>)</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">'height'</span><span class="op">,</span> <span class="st">'100%'</span>)<span class="op">;</span></span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> style <span class="op">=</span> isTest </span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    <span class="op">?</span> <span class="st">'height: ${height / 4}px;'</span></span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span> <span class="vs">`</span></span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a><span class="vs">      position: absolute;</span></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a><span class="vs">      top: 0px;</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="vs">      bottom: 0px;</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a><span class="vs">      left: 0px;</span></span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a><span class="vs">      right: 0px;</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="</span></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a><span class="vs">      font-family: 'Montserrat', sans-serif;</span></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a><span class="vs">      background-color: </span><span class="sc">${</span>backgroundColor<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>style<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a><span class="vs">    "&gt;</span></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;link rel='stylesheet' href='https://unpkg.com/wa-mediabox@1.0.1/dist/wa-mediabox.min.css'/&gt; </span></span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"&gt;</span></span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;style&gt;</span></span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a><span class="vs">        .__wa-mediabox-open {</span></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a><span class="vs">          visibility: hidden;</span></span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a><span class="vs">        }</span></span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="vs">        .wa-mediabox-frame .wa-mediabox-close {</span></span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a><span class="vs">            right: 4px;</span></span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a><span class="vs">            top: 4px;</span></span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a><span class="vs">            width: 36px;</span></span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="vs">            height: 36px;</span></span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a><span class="vs">          transform: scale(</span><span class="sc">${</span>isMoble <span class="op">?</span> <span class="dv">3</span> <span class="op">:</span> <span class="fl">0.9</span><span class="sc">}</span><span class="vs">);</span></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a><span class="vs">        } </span></span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="vs">        .wa-mediabox-frame {</span></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a><span class="vs">          top: 40%;</span></span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="vs">          transform: scale(0.904);</span></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a><span class="vs">        }</span></span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a><span class="vs">        .wa-mediabox-frame, .wa-mediabox-container {</span></span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a><span class="vs">          border-top-left-radius: 5px;</span></span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="vs">          border-top-right-radius: 5px;</span></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="vs">        } </span></span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="vs">        .wa-mediabox-title {</span></span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a><span class="vs">          font-family: 'Montserrat', sans-serif;</span></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a><span class="vs">          font-size: 16px;</span></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a><span class="vs">          background: </span><span class="sc">${</span>backgroundColor<span class="sc">}</span><span class="vs">; </span></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="vs">          color: #555;</span></span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a><span class="vs">          top: 100%;</span></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="vs">          bottom: auto;</span></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a><span class="vs">          border-bottom-left-radius: 5px;</span></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a><span class="vs">          border-bottom-right-radius: 5px;</span></span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a><span class="vs">        }</span></span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a><span class="vs">        .wa-mediabox-frame.loaded.has-title .wa-mediabox-title {</span></span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a><span class="vs">          padding: 4px 14px 20px 14px;</span></span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a><span class="vs">          user-select: all;</span></span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a><span class="vs">        }</span></span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a><span class="vs">        .wa-mediabox-title a:link, .wa-mediabox-title a:visited {</span></span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a><span class="vs">          text-decoration: none;</span></span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a><span class="vs">          cursor: pointer;</span></span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a><span class="vs">          font-weight: bold;</span></span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a><span class="vs">          color: rgb(72, 128, 184);</span></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a><span class="vs">        }</span></span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/style&gt;</span></span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>svg<span class="sc">}</span></span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">renderGraph</span>(data<span class="op">,</span> d3<span class="op">.</span><span class="fu">select</span>(svg)<span class="op">,</span> width<span class="op">,</span> height)<span class="op">;</span></span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> container<span class="op">;</span></span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-8" data-nodetype="declaration">
 
 </div>
 </div>
@@ -209,7 +354,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"md`### Themes`\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"__page = hostedOnThumbtools()\n  ? pageRenderer(graphData, width, height, false)\n  : pageRenderer(graphData, width, 800, true)\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"viewof linkColor = color({\n  value: \"#aaaaaa\",\n  title: \"Link Color\"\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"viewof backgroundColor = color({\n  // value: d3.color(\"rgb(253, 242, 208)\").hex(),\n  value: \"#fff7e0\", // \"#f7f7f7\", //\"#f2f0e6\",\n  title: \"Background Color\"\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"depthSizeScale = d3\n  .scalePow()\n  .exponent(0.7)\n  .domain([0, maxDepth])\n  .range([1, 0.6])\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"strokeWidth = 4\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"imageSize = 140\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"depthThickScale = d3.scaleLinear().domain([0, maxDepth - 1]).range([10, 5])\n"},{"methodName":"interpret","cellName":"ojs-cell-8","inline":false,"source":"pageRenderer = (data, width, height, isTest = false) => {\n  const svg = DOM.svg(width, height);\n  \n  d3.select(svg)\n    .style('width', '100%')\n    .style('height', '100%');\n  \n  const style = isTest \n    ? 'height: ${height / 4}px;'\n    : `\n      position: absolute;\n      top: 0px;\n      bottom: 0px;\n      left: 0px;\n      right: 0px;\n    `;\n  const container = html`\n    <div style=\"\n      font-family: 'Montserrat', sans-serif;\n      background-color: ${backgroundColor};\n      ${style};\n    \">\n      <link rel='stylesheet' href='https://unpkg.com/wa-mediabox@1.0.1/dist/wa-mediabox.min.css'/> \n      <link href=\"https://fonts.googleapis.com/css?family=Montserrat\" rel=\"stylesheet\">\n      <style>\n        .__wa-mediabox-open {\n          visibility: hidden;\n        }\n\n        .wa-mediabox-frame .wa-mediabox-close {\n        \tright: 4px;\n        \ttop: 4px;\n        \twidth: 36px;\n        \theight: 36px;\n          transform: scale(${isMoble ? 3 : 0.9});\n        } \n\n        .wa-mediabox-frame {\n          top: 40%;\n          transform: scale(0.904);\n        }\n\n        .wa-mediabox-frame, .wa-mediabox-container {\n          border-top-left-radius: 5px;\n          border-top-right-radius: 5px;\n        } \n        .wa-mediabox-title {\n          font-family: 'Montserrat', sans-serif;\n          font-size: 16px;\n          background: ${backgroundColor}; \n          color: #555;\n          top: 100%;\n          bottom: auto;\n          border-bottom-left-radius: 5px;\n          border-bottom-right-radius: 5px;\n        }\n\n        .wa-mediabox-frame.loaded.has-title .wa-mediabox-title {\n          padding: 4px 14px 20px 14px;\n          user-select: all;\n        }\n\n        .wa-mediabox-title a:link, .wa-mediabox-title a:visited {\n          text-decoration: none;\n          cursor: pointer;\n          font-weight: bold;\n          color: rgb(72, 128, 184);\n        }\n\n      </style>\n\n      ${svg}\n    </div>`;\n\n  renderGraph(data, d3.select(svg), width, height);\n  return container;\n}\n"},{"methodName":"interpretQuiet","source":"shinyInput('linkColor')"},{"methodName":"interpretQuiet","source":"shinyInput('backgroundColor')"}]}
 </script>
 <script type="module">
 window._ojs.paths.runtimeToDoc = "../..";
