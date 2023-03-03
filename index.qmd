@@ -440,7 +440,7 @@ tree = ({
     "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
   children: [
     {
-      title: "Transparency Report",
+      title: "A",
       link: "https://transparency.twitter.com/",
       group: "trans",
       description:
@@ -479,7 +479,7 @@ tree = ({
       ]
     },
     {
-      title: "Nexus Navigator",
+      title: "B",
       group: "nn",
       description:
         "The Nexus Navigator is a tool I built to investigate interactions between relatively small sets of Twitter users to highlight patterns of behavior.  The interactions are presented as a graph in the center, with filters on the left, selected interactions on the right and a timeline at the bottom.",
@@ -505,7 +505,7 @@ tree = ({
       ]
     },
     {
-      title: "US Presidential Candidate Twitter Buzz",
+      title: "C",
       _link: "https://interactive.twitter.com/candidateRace16/",
       group: "race",
       description:
@@ -526,7 +526,7 @@ tree = ({
       ]
     },
     {
-      title: "User Cohort Flow",
+      title: "D",
       group: "flow",
       description:
         "This chart shows the flow between different segments of Twitter users.  This internal tool was used to measure the health of various markets.  In this view, the numbers on the edges show the difference from one time period to the next.  It was also possible to show the difference between two countries to measure relative health.  The color-coding on the edges highlight segments which are in trouble.",
@@ -534,7 +534,7 @@ tree = ({
         "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
     },
     {
-      title: "Emoji Use on Twitter",
+      title: "E",
       group: "fun",
       description:
         "I have had a chance to work on a number of more whimsical projects. For example, this is a prototype to show emoji use on Twitter, though it was not published.  A simple [ordered list](https://twitter.com/twitterdata/status/673905956909133824) was chosen instead.  I thought my treatment was fun if a little busy.",
@@ -562,7 +562,7 @@ tree = ({
       ]
     },
     {
-      title: "Twitter Flight 2015",
+      title: "F",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
       group: "flight",
