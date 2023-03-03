@@ -437,7 +437,7 @@ tree = ({
   description:
     "Welcome to [Learning Themes](https://github.com/vanHeemstraSystems/learning-themes)",
   img:
-    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+    "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
   children: [
     {
       title: "Transparency Report",
