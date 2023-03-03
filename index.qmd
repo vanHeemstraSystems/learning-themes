@@ -437,7 +437,7 @@ tree = ({
   description:
     "Welcome to [Learning Themes](https://github.com/vanHeemstraSystems/learning-themes)",
   img:
-    "https://raw.githubusercontent.com/vanHeemstraSystems/learning-themes/main/images/placeholder.png",
+    "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
   children: [
     {
       title: "Transparency Report",
@@ -446,7 +446,7 @@ tree = ({
       description:
         "This report summarizes legal requests received by Twitter and is updated twice a year.  I created all the interactive visual components and engineered them to support future report data without code changes.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLXigBO-KBsubfpquO9BWa2OVsZX_KjsEhwTSnFgjF0CzQTDJVi8NYSA9wmKWxFNl-Ergz6nZXOXD9eBzCc9_cK7Z_1nqMc9SSovl1PWKJ0-vnEYL8VrPH6KHPHli5fzb7pOvKGbnabxUfyUmplmdEbdAw=w2240-h788-no",
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
           title: "Removal Requests",
@@ -455,7 +455,7 @@ tree = ({
           description:
             "This section shows requests received by Twitter to remove content, and the percentage of those requests granted, broken down by country.  Small countries are zoomed in on the map or would otherwise be too small to see.  Also, the underlying map data is specially treated to reduce data weight.",
           img:
-            "https://lh3.googleusercontent.com/pw/AM-JKLUqZ-ce1jf8Ilj5s0bODKk93zdnPtIXXNC58L5xoZ_r1yY9OEfuAGi_ud2AAFKcm4XblgdhFkUTqDy6QbSJherOKcXz9VUMzB1CFawNytNaQbZBO3t3bxVgXXMD7VCinSOfg9vM1iDAxrWCIQjTHmehuA=w2012-h1166-no"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         },
         {
           title: "Information Requests",
@@ -465,7 +465,7 @@ tree = ({
             "This section shows requests for private account information.  On the map, you can click on the US, and the map will zoom smoothly from a worldwide [Robinson](https://en.wikipedia.org/wiki/Robinson_projection) to an [Albers](https://en.wikipedia.org/wiki/Albers_projection) USA projection to breakdown requests by US state.",
           url: "https://transparency.twitter.com/en/information-requests.html",
           img:
-            "https://lh3.googleusercontent.com/pw/AM-JKLUHGp8W9EwlF2jsP3KBTx_vzkMebJyM3KuV2grIcMC4Yac52U9SriMi2SbmpEcOLPwxJ03FtByK-Zr5Rp2zSsYBFg2Jo_C8fMt-dWwBLr2iFJcpQtDXf21SRxGqmaQWpNXpIzgZP5vA9oSyUlirrdcQ7A=w2016-h1168-no?authuser=0"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         },
         {
           title: "Copyright notices",
@@ -474,7 +474,7 @@ tree = ({
           description:
             "This section reports on requests to remove content that might infringe copyright.  This stream graph shows the increase in [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) takedown notices over time.",
           img:
-            "https://lh3.googleusercontent.com/pw/AM-JKLWT29F1KUiAwyqhJhUM9KWhwZHl02QDn90Gk062MOCMRddb7e4xmiJyOV1vyv8q8Fy8IESMmlr3HMabKETTm9Sank-odP6KMSmdzc2QuPq8SIMn3UVWNP4uMfzCqxOtqLt9DvVecJRvekmbVDq3v_MMeQ=w2008-h1036-no?authuser=0"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
       ]
     },
@@ -484,7 +484,7 @@ tree = ({
       description:
         "The Nexus Navigator is a tool I built to investigate interactions between relatively small sets of Twitter users to highlight patterns of behavior.  The interactions are presented as a graph in the center, with filters on the left, selected interactions on the right and a timeline at the bottom.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLVTF23SIdtx0AkrMR2Oa5Fxz2syZ3OGeA5tqvf_VTZ2g5IsBK5Bcks59QnAHT-FynUuohdneMMVRur6yjuMpRtoDYvLHje4Qb-qzXhjBJYPXtoWfGhcwB_7JYkIKlkdUogFrhGDRDC8L-bR7xbRaGQKFw=w1200-h976-no?authuser=0",
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
           title: "Relationship Detail",
@@ -492,7 +492,7 @@ tree = ({
           description:
             "The graph shows interactions between users.  Where possible users are bundled into groups that may be interactively expanded.  The interaction types and counts are encoded into edge shape, color and thickness.",
           img:
-            "https://lh3.googleusercontent.com/S5kWU5T-aNfOhW7lei8saHYVk3vX7HUAEFZEKX7-d5bXG0mANdJavzzaurrmDg2vJnpRPpfyuP4E9aD4vWqlzLNZki3LodWjjzBCwDNtv39LTRuhxU2Rv6-Ox3w_Zw4A1UoxxsG-OMc=w870-h838-no"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         },
         {
           title: "Event Timeline",
@@ -500,7 +500,7 @@ tree = ({
           description:
             "Events are summarized into a timeline to show activity peaks. When the user hovers over graph nodes or edges, the relevant events are highlighted here.",
           img:
-            "https://lh3.googleusercontent.com/NekXT3DPI8iNFLD7TI9nfo3HwUGTrzRPYKI17AVfe-8a3yhCSHxZHLW5OBFWjNGXIptN-nYN-ZR3qCy_04zC55jgXEgKEGpAKWZ8ztFcV1nCy17gHZhOFerlUQ7fJD2OCvc8XU_bOwc=w1194-h122-no"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
       ]
     },
@@ -511,7 +511,7 @@ tree = ({
       description:
         "This interactive was published leading up to the 2016 election, and updated regularly.  Initially, it shows candidates ranked by buzz on Twitter and indicates when each candidate dropped out of the race.  If you mouse over the primaries and debates you can see who participated in which.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLWmewBMgAkUenTt8IjhM0MDkhLlpITWtOiKmVUl7VfUw1D7sV81QECpszGN7UUlDpNFmbRpGWgm89E3WhcZbY9JQiIV42US_YVqMc8lmu_-DfqlOuXM_wivuTgtCqZLirItRWiUoD9UzfWDAG-_if7Lrw=w2316-h1344-no?authuser=0",
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
           title: "A Proportional View",
@@ -521,7 +521,7 @@ tree = ({
           description:
             "The UI provides filters, selectors, and the option to animate the race.  Shown here are how the final three candidates fared in Arkansas, proportionally, rather than by rank.",
           img:
-            "https://lh3.googleusercontent.com/pw/AM-JKLUIB35tPmVG9k4ySFLa36TgZ7XybL1T8Rl4719nkE1bTk-V3pdFUj_r3Qt1sP1Js2hZdad5C_kkWHXWMkmiAAeO6Bu9vXmO9KCE5zXcBPgXNiixI2plhijj2Emo-ngiRx33aVJxupx0pIJfwnjZmhHK9A=w2328-h1344-no?authuser=0"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
       ]
     },
@@ -531,7 +531,7 @@ tree = ({
       description:
         "This chart shows the flow between different segments of Twitter users.  This internal tool was used to measure the health of various markets.  In this view, the numbers on the edges show the difference from one time period to the next.  It was also possible to show the difference between two countries to measure relative health.  The color-coding on the edges highlight segments which are in trouble.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLV-xsD0o03JEGPehjpwJtNGp9gd94hKahh7pkI9BjBke1sF63p6bPxVHE9xJUAd0njRNC9mlFY1eCabwTlbXn_wWOTyA6jspUMoUETrOe_N9Un18el-riZVnwm9jaY5AXyBcRZ64T2hNiTGt7YGKMz28Q=w1047-h685-no?authuser=0"
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
     },
     {
       title: "Emoji Use on Twitter",
@@ -539,7 +539,7 @@ tree = ({
       description:
         "I have had a chance to work on a number of more whimsical projects. For example, this is a prototype to show emoji use on Twitter, though it was not published.  A simple [ordered list](https://twitter.com/twitterdata/status/673905956909133824) was chosen instead.  I thought my treatment was fun if a little busy.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLX347sL2tcZcjizmSO18wKI0m96tFVrXaIhdbTKl274JssVyNbQfSF_CuRsfb6eHjxZl-nB8ymzFqdNTTqde-wfavznZRphnRZHCrHzoq80DnEbLt2MukIF_gt8a75vSm32kiEzgNeszqhwF1R5Chwu3Q=w799-h599-no?authuser=0",
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
           title: "Twitter New Year's Eve 2012",
@@ -549,7 +549,7 @@ tree = ({
           description:
             'This static visualization overlays the tweets per second during New Year’s Day 2012 on a globe centered on the north pole.  It is arranged such that each "midnight spike" is aligned with the geography from which those tweets would likely come.  It was discussed here on Reddit\'s [Data Is Beautiful](https://www.reddit.com/r/dataisbeautiful/comments/15u2jy/tweets_per_second_on_nye_around_the_globe/).  I wish I had chosen better colors.',
           img:
-            "https://lh3.googleusercontent.com/fjEuBlmZ_IYT_NItBIkG9Dj9az-j78EWrqWtrgIArmSFS62VdF3hF2jekq9BLU3ldRGoho4fDKXqG_xOe9shIyCTPLq8BllQDadB8Z3nhCCTWYeV9eyd6Nfz-wLYXISXJfpIToQXemE=s799-no"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         },
         {
           title: "Live Geographic Aggregation",
@@ -557,7 +557,7 @@ tree = ({
           description:
             "Here recent tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html) were grouped by hashtag or @handle, then rendered onto an ever zooming, scaling map.  Sporting events, conferences, earthquakes, and even rainbows would be highlighted.  A small time-series plot at the top of the screen showed the event trend.",
           img:
-            "https://lh3.googleusercontent.com/L5mQFj78Na-FUyOYVrRJUaWqz2xfeopI1thF6gr6jlyqoZRsPh-LfA5Tal9vcURIJqB-CBbLbimU4RInAxxqzrqihuxcnzgo7K-PTdI92sk3MCg44nJDY5vhDg9mC3sddGPuJmhr544=w1011-h631-no"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
       ]
     },
@@ -569,7 +569,7 @@ tree = ({
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
-        "https://lh3.googleusercontent.com/eoBp86v6tmp1hqJaKL4l-ybqHFZW7QPsbmLsMS0zEav-DUMOk0Eb4J5llI3cE-L7Ymw5ZKjr5LZQoy_0goGlmtBeq1W7GbUhN9Mp9qvtubcpMFGfE2r_FJt23sevX8sKjqNvSnC1ODg=w585-h544-no",
+        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
       children: [
         {
           title: "With Cats",
@@ -578,7 +578,7 @@ tree = ({
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
           img:
-            "https://lh3.googleusercontent.com/fL9i6gyFxqYfm9EqvKIcJNJn7mv_8QOzev56NXKO0aAiNp12QdoxZdj58xlLoEiTKMiG4nuA46U96hJalP6b99J7jFsUJbADVR7VSn5qT9mq1XawCH5eOdbg89VajXGuAUdVxY6B-3I=s320-no"
+            "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0"
         }
       ]
     }
