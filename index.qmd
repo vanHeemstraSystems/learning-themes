@@ -25,7 +25,7 @@ viewof linkColor = color({
 //| echo: false
 viewof backgroundColor = color({
   // value: d3.color("rgb(253, 242, 208)").hex(),
-  value: "#fff7e0", // "#f7f7f7", //"#f2f0e6",
+  value: "#ffffff", // "#f7f7f7", //"#f2f0e6",
   title: "Background Color"
 })
 ```
