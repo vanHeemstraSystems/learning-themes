@@ -442,7 +442,7 @@ tree = ({
     {
       title: "A: Automation",
       link: "https://vanheemstrasystems.github.io/learning-automation",
-      group: "trans",
+      group: "automation",
       description:
         "About Automation.",
       img:
@@ -451,7 +451,7 @@ tree = ({
         {
           title: "Removal Requests",
           link: "https://transparency.twitter.com/en/removal-requests.html",
-          group: "trans",
+          group: "automation",
           description:
             "This section shows requests received by Twitter to remove content, and the percentage of those requests granted, broken down by country.  Small countries are zoomed in on the map or would otherwise be too small to see.  Also, the underlying map data is specially treated to reduce data weight.",
           img:
@@ -460,7 +460,7 @@ tree = ({
         {
           title: "Information Requests",
           link: "https://transparency.twitter.com/en/information-requests.html",
-          group: "trans",
+          group: "automation",
           description:
             "This section shows requests for private account information.  On the map, you can click on the US, and the map will zoom smoothly from a worldwide [Robinson](https://en.wikipedia.org/wiki/Robinson_projection) to an [Albers](https://en.wikipedia.org/wiki/Albers_projection) USA projection to breakdown requests by US state.",
           url: "https://transparency.twitter.com/en/information-requests.html",
@@ -470,7 +470,7 @@ tree = ({
         {
           title: "Copyright notices",
           link: "https://transparency.twitter.com/en/copyright-notices.html",
-          group: "trans",
+          group: "automation",
           description:
             "This section reports on requests to remove content that might infringe copyright.  This stream graph shows the increase in [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) takedown notices over time.",
           img:
@@ -480,7 +480,7 @@ tree = ({
     },
     {
       title: "B: Application Programming Interfaces",
-      group: "nn",
+      group: "application-programming-interfaces",
       description:
         "The Nexus Navigator is a tool I built to investigate interactions between relatively small sets of Twitter users to highlight patterns of behavior.  The interactions are presented as a graph in the center, with filters on the left, selected interactions on the right and a timeline at the bottom.",
       img:
@@ -488,7 +488,7 @@ tree = ({
       children: [
         {
           title: "Relationship Detail",
-          group: "nn",
+          group: "application-programming-interfaces",
           description:
             "The graph shows interactions between users.  Where possible users are bundled into groups that may be interactively expanded.  The interaction types and counts are encoded into edge shape, color and thickness.",
           img:
@@ -496,7 +496,7 @@ tree = ({
         },
         {
           title: "Event Timeline",
-          group: "nn",
+          group: "application-programming-interfaces",
           description:
             "Events are summarized into a timeline to show activity peaks. When the user hovers over graph nodes or edges, the relevant events are highlighted here.",
           img:
@@ -507,7 +507,7 @@ tree = ({
     {
       title: "C: CI/CD",
       _link: "https://interactive.twitter.com/candidateRace16/",
-      group: "race",
+      group: "ci-cd",
       description:
         "This interactive was published leading up to the 2016 election, and updated regularly.  Initially, it shows candidates ranked by buzz on Twitter and indicates when each candidate dropped out of the race.  If you mouse over the primaries and debates you can see who participated in which.",
       img:
@@ -517,7 +517,7 @@ tree = ({
           title: "A Proportional View",
           _link:
             "https://interactive.twitter.com/candidateRace16/?metric=proportion&state=AR&status=active",
-          group: "race",
+          group: "ci-cd",
           description:
             "The UI provides filters, selectors, and the option to animate the race.  Shown here are how the final three candidates fared in Arkansas, proportionally, rather than by rank.",
           img:
@@ -527,7 +527,7 @@ tree = ({
     },
     {
       title: "D: Containerisation",
-      group: "flow",
+      group: "containerisation",
       description:
         "This chart shows the flow between different segments of Twitter users.  This internal tool was used to measure the health of various markets.  In this view, the numbers on the edges show the difference from one time period to the next.  It was also possible to show the difference between two countries to measure relative health.  The color-coding on the edges highlight segments which are in trouble.",
       img:
@@ -535,7 +535,7 @@ tree = ({
     },
     {
       title: "E: Computing",
-      group: "fun",
+      group: "computing",
       description:
         "I have had a chance to work on a number of more whimsical projects. For example, this is a prototype to show emoji use on Twitter, though it was not published.  A simple [ordered list](https://twitter.com/twitterdata/status/673905956909133824) was chosen instead.  I thought my treatment was fun if a little busy.",
       img:
@@ -543,7 +543,7 @@ tree = ({
       children: [
         {
           title: "Twitter New Year's Eve 2012",
-          group: "fun",
+          group: "computing",
           link:
             "https://blog.twitter.com/official/en_us/a/2013/celebrating-2013-in-the-global-town-square.html",
           description:
@@ -553,7 +553,7 @@ tree = ({
         },
         {
           title: "Live Geographic Aggregation",
-          group: "fun",
+          group: "computing",
           description:
             "Here recent tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html) were grouped by hashtag or @handle, then rendered onto an ever zooming, scaling map.  Sporting events, conferences, earthquakes, and even rainbows would be highlighted.  A small time-series plot at the top of the screen showed the event trend.",
           img:
@@ -565,7 +565,7 @@ tree = ({
       title: "F: Infrastructure-as-Code",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "infrastructure-as-code",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -573,7 +573,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "infrastructure-as-code",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -586,7 +586,7 @@ tree = ({
       title: "G: Pipelines",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "pipelines",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -594,7 +594,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "pipelines",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -607,7 +607,7 @@ tree = ({
       title: "H: Process Mining",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "process-mining",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -615,7 +615,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "process-mining",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -628,7 +628,7 @@ tree = ({
       title: "I: Programming",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "programming",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -636,7 +636,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "programming",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -649,7 +649,7 @@ tree = ({
       title: "J: Security",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "security",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -657,7 +657,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "security",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -670,7 +670,7 @@ tree = ({
       title: "K: Testing",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "testing",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -678,7 +678,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "testing",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -691,7 +691,7 @@ tree = ({
       title: "L: Value-Chain Management",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "value-chain-management",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -699,7 +699,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "value-chain-management",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
@@ -712,7 +712,7 @@ tree = ({
       title: "M: Workflow Management",
       link:
         "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
-      group: "flight",
+      group: "workflow-management",
       description:
         'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
       img:
@@ -720,7 +720,7 @@ tree = ({
       children: [
         {
           title: "With Cats",
-          group: "flight",
+          group: "workflow-management",
           description:
             "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
           link: "https://twitter.com/TwitterDev/status/656534589687500800",
