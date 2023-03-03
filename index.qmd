@@ -14,7 +14,7 @@ __page = hostedOnThumbtools()
 ```
 
 ```{ojs}
-//| echo: false
+//| echo: true
 viewof linkColor = color({
   value: "#aaaaaa",
   title: "Link Color"
@@ -22,7 +22,7 @@ viewof linkColor = color({
 ```
 
 ```{ojs}
-//| echo: false
+//| echo: true
 viewof backgroundColor = color({
   // value: d3.color("rgb(253, 242, 208)").hex(),
   value: "#fff7e0", // "#f7f7f7", //"#f2f0e6",
