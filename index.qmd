@@ -450,7 +450,7 @@ tree = ({
       children: [
         {
           title: "Home Automation",
-          link: "https://vanheemstrasystems.github.io/learning-automation-home-automation",
+          link: "https://vanheemstrasystems.github.io/learning-home-automation",
           group: "automation",
           description:
             "About Home Automation.",
