@@ -135,8 +135,455 @@ pageRenderer = (data, width, height, isTest = false) => {
 }
 ```
 
+```{ojs}
+//| echo: false
+renderGraph = (data, svg, width, height) => {
+  const links = data.links.map(d => Object.create(d));
+  const nodes = data.nodes.map(d => Object.create(d));
+ 
+  const defs = svg.append('defs');
+  defs
+    .append('svg:clipPath')
+    .attr('id', 'circle-clip')
+    .append('svg:circle')
+    .attr('cx', 0)
+    .attr('cy', 0)
+    .attr('r', imageSize / 2);
 
+  const linkForce = d3
+    .forceLink(links)
+    .id(d => d.title)
+    .distance(d => depthSizeScale(d.source.depth) * imageSize * 1.1)
+    .strength(0.8);
+    
+  const collideForce = d3.forceCollide()
+      .radius(d => imageSize / 2 * depthSizeScale(d.depth));      
 
+  const simulation = d3.forceSimulation(nodes)
+      .force("link", linkForce)
+      .force("charge", d3.forceManyBody().strength(-800))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .tick(80)
+      .force('collide', collideForce)
 
+  const link = svg.append("g")
+    .attr("stroke", linkColor)
+    .attr('fill', 'none')
+    .selectAll(".link")
+    .data(links)
+    .join("path")
+    .classed('link', true)
+    .attr('stroke-linecap', 'round')
+    .attr("stroke-width", d => depthThickScale(d.source.depth));
+
+  const node = svg.append('g')
+    .selectAll('.node')
+    .data(nodes)
+    .join('g')
+    .attr('id', d => d.title)
+    .classed('node', true)
+    .style('cursor', 'pointer')
+    .call(drag(simulation))
+    .call(renderNode);
+
+  
+  const vertPath = (x0, y0, x1, y1) => `M ${x0} ${y0} C ${x1} ${y0} ${x0} ${y1}  ${x1} ${y1}`;
+  const horzPath = (x0, y0, x1, y1) => `M ${x0} ${y0} C ${x0} ${y1}  ${x1} ${y0}  ${x1} ${y1}`;
+  
+  const pathPatternLut = [horzPath, vertPath, horzPath, vertPath];
+
+  const linkPath = ({ source: { x: x0, y: y0 }, target: { x: x1, y: y1 } }) => {
+    const quadrant = Math.round((Math.PI * 1.5 + Math.atan2(y0 - y1, x0 - x1)) 
+                                / (Math.PI / 2)) % 4;
+    return pathPatternLut[quadrant](x0, y0, x1, y1);
+  };
+
+  simulation.on("tick", () => {
+    link.attr('d', linkPath);
+    node.attr('transform', d => `translate(${d.x}, ${d.y}) scale(${depthSizeScale(d.depth)})`);
+  });
+
+  invalidation.then(() => simulation.stop());
+}
+```
+
+```{ojs}
+//| echo: false
+renderNode = (node) => {
+  node
+    .append("circle")
+    .attr("href", (d) => d.img)
+    .attr("r", imageSize * 0.5 + strokeWidth / 2)
+    .attr("data-mediabox", "all") //(d) => d.group || "my-gallery-name")
+    .attr("data-title", (d) => "--")
+    .attr("fill", "rgba(255, 255, 255, 1)")
+    .attr("stroke", linkColor)
+    .attr("stroke-width", strokeWidth)
+    .each(function eachCall(d) {
+      WAMediaBox.bind(d3.select(this).node(), (container) => {
+        container.innerHTML = "";
+        container.appendChild(renderBlurb(d));
+      });
+    });
+
+  node
+    .filter((d) => d.img)
+    .append("image")
+    .attr("clip-path", "url(#circle-clip)")
+    .attr(
+      "xlink:href",
+      (d) => `${d.img.split("=")[0]}=${d.aspect < 1 ? "h" : "w"}${imageSize}-no`
+    )
+    .style("pointer-events", "none")
+    .attr("transform", (d) => `scale(${d.scale ? d.scale : 1})`)
+    .style("opacity", 0.8)
+    .attr("width", (d) => imageSize * (d.aspect > 1 ? 1 : 1 / d.aspect))
+    .attr("height", (d) => imageSize * (d.aspect <= 1 ? 1 : d.aspect))
+    .attr("x", (d) =>
+      d.aspect > 1
+        ? imageSize / -2
+        : `${-(d.width / 2) / (d.height / imageSize)}`
+    )
+    .attr("y", (d) =>
+      d.aspect <= 1
+        ? imageSize / -2
+        : `${-(d.height / 2) / (d.width / imageSize)}`
+    );
+
+  node.append("title").text((d) => d.title);
+}
+```
+
+```{ojs}
+//| echo: false
+renderBlurb = ({ title, link, description }) => {
+  const linksModified = (description || "").replace(
+    /\[(.*?)\]\((.*?)\)/g,
+    (match, name, url) => `<a href="${url}" target="_blank">${name}</a>`
+  );
+
+  return html`
+    <div style="user-select: ${hostedOnThumbtools() ? "none" : "auto"};">
+    <!-- h2 style="${isMoble ? "font-size: 2.1em;" : ""}">
+      ${link ? `<a href="${link}" target="_blank">${title}</a>` : title}
+      ${
+        link
+          ? `<a class="more-link" style="color: rgba(184, 67, 61, 1); font-size: 0.6em; padding-left: 8px;" href="${link}" target="_blank">See More</a>`
+          : ""
+      }
+     </h2 -->
+
+    <h2 style="font-size: 3.9vmin">
+      ${link ? `<a href="${link}" target="_blank">${title}</a>` : title}
+      ${
+        link
+          ? `<a class="more-link" style="color: rgba(184, 67, 61, 1); font-size: 0.6em; padding-left: 8px;" href="${link}" target="_blank">See More</a>`
+          : ""
+      }
+     </h2>
+
+    <!-- div style="${
+      isMoble
+        ? "font-size: 2.1em; line-height: 1em;"
+        : "font-size: 0.6m; line-height: 1.3em;"
+    }"
+    >
+      ${linksModified}
+    </div -->
+
+    <div style="${
+      isMoble
+        ? "font-size: 3.4vmin; line-height: 3.6vmin;"
+        : "font-size: 2.1vmin; line-height: 2.3vmin;"
+    }"
+    >
+      ${linksModified}
+    </div>
+
+    <!-- div style="font-size: 2.6vmin; line-height: 3vmin;">
+      ${linksModified}
+    </div -->
+
+  </div>`;
+}
+```
+
+```{ojs}
+//| echo: false
+drag = simulation => {
+  
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+  
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+  
+  return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
+}
+```
+
+```{ojs}
+//| echo: false
+isMoble = {
+// device detection
+if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+    return true;
+}
+  return false;
+}
+```
+
+```{ojs}
+//| echo: false
+height = {
+  const body = document.body;
+  const doc = document.documentElement;
+  return Math.max(
+      body.scrollHeight, body.offsetHeight,
+      doc.clientHeight, doc.scrollHeight, doc.offsetHeight);
+}
+```
+
+```{ojs}
+//| echo: false
+maxDepth = {
+    function findDepth(node, depth = 0) {
+    if (!node.children || node.children.length === 0) {
+      return depth;
+    }
+    
+    return d3.max(node.children.map(child => findDepth(child, depth + 1)));
+  }
+
+  return findDepth(tree);
+}
+```
+
+```{ojs}
+//| echo: false
+imageSizeMap = {
+  const collectNodes = node => _.flatten([node, ...(node.children ? node.children.map(collectNodes) : [])]);
+  
+  return collectNodes(tree)
+    .filter(d => d.img)
+    .map(({ title, img }) => {
+      const params = img
+        .split('=')[1]
+        .split('-')
+        .reduce((map, param) => {
+          map[param[0]] = param.slice(1);
+          return map;
+        }, {});
+    
+        const width = +(params['w'] || params['s']);
+        const height= +(params['h'] || params['s']);
+
+        return ({
+          title,
+          params, 
+          width,
+          height,
+          aspect: height / width,
+        });
+    })
+    .reduce((map, size) => ({...map, [size.title]: size }), {});
+}
+```
+
+```{ojs}
+//| echo: false
+graphData = {
+  const nodes = [];
+  const links = [];
+  let id = 0;
+  const collect = (node, depth = 0) => {
+    nodes.push({...imageSizeMap[node.title], ...node, depth, id: id++, ...(isMoble ? {group: 'all'} : {})});
+    if (!node.children) return [];
+    return node.children.forEach(child => {
+      links.push({
+        source: node.title,
+        target: child.title,
+      });
+      collect(child, depth + 1);
+    });
+  }
+   
+  collect(tree);
+  return { nodes, links };
+}
+```
+
+```{ojs}
+//| echo: false
+tree = ({
+  title: "A Visualization Portfolio",
+  group: "root",
+  scale: 0.94,
+  description:
+    "My name is [Robert Harris](https://docs.google.com/document/d/1Whdt8nYqjG_lzdgx6BvgIFcGutiXiqNs3F5SUVPMisA/edit?usp=sharing&authkey=CMnOiekK) and here you will find attached some of my visualization work created while working at [Twitter](https://twitter.com/trebor). You can peek under the hood and see how this page is constructed from an [Observable Notebook](https://observablehq.com/@trebor/portfolio) and published via [Thumbtools](https://thumbtools.org/).",
+  img:
+    "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
+  children: [
+    {
+      title: "Transparency Report",
+      link: "https://transparency.twitter.com/",
+      group: "trans",
+      description:
+        "This report summarizes legal requests received by Twitter and is updated twice a year.  I created all the interactive visual components and engineered them to support future report data without code changes.",
+      img:
+        "https://lh3.googleusercontent.com/pw/AM-JKLXigBO-KBsubfpquO9BWa2OVsZX_KjsEhwTSnFgjF0CzQTDJVi8NYSA9wmKWxFNl-Ergz6nZXOXD9eBzCc9_cK7Z_1nqMc9SSovl1PWKJ0-vnEYL8VrPH6KHPHli5fzb7pOvKGbnabxUfyUmplmdEbdAw=w2240-h788-no",
+      children: [
+        {
+          title: "Removal Requests",
+          link: "https://transparency.twitter.com/en/removal-requests.html",
+          group: "trans",
+          description:
+            "This section shows requests received by Twitter to remove content, and the percentage of those requests granted, broken down by country.  Small countries are zoomed in on the map or would otherwise be too small to see.  Also, the underlying map data is specially treated to reduce data weight.",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLUqZ-ce1jf8Ilj5s0bODKk93zdnPtIXXNC58L5xoZ_r1yY9OEfuAGi_ud2AAFKcm4XblgdhFkUTqDy6QbSJherOKcXz9VUMzB1CFawNytNaQbZBO3t3bxVgXXMD7VCinSOfg9vM1iDAxrWCIQjTHmehuA=w2012-h1166-no"
+        },
+        {
+          title: "Information Requests",
+          link: "https://transparency.twitter.com/en/information-requests.html",
+          group: "trans",
+          description:
+            "This section shows requests for private account information.  On the map, you can click on the US, and the map will zoom smoothly from a worldwide [Robinson](https://en.wikipedia.org/wiki/Robinson_projection) to an [Albers](https://en.wikipedia.org/wiki/Albers_projection) USA projection to breakdown requests by US state.",
+          url: "https://transparency.twitter.com/en/information-requests.html",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLUHGp8W9EwlF2jsP3KBTx_vzkMebJyM3KuV2grIcMC4Yac52U9SriMi2SbmpEcOLPwxJ03FtByK-Zr5Rp2zSsYBFg2Jo_C8fMt-dWwBLr2iFJcpQtDXf21SRxGqmaQWpNXpIzgZP5vA9oSyUlirrdcQ7A=w2016-h1168-no?authuser=0"
+        },
+        {
+          title: "Copyright notices",
+          link: "https://transparency.twitter.com/en/copyright-notices.html",
+          group: "trans",
+          description:
+            "This section reports on requests to remove content that might infringe copyright.  This stream graph shows the increase in [DMCA](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) takedown notices over time.",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLWT29F1KUiAwyqhJhUM9KWhwZHl02QDn90Gk062MOCMRddb7e4xmiJyOV1vyv8q8Fy8IESMmlr3HMabKETTm9Sank-odP6KMSmdzc2QuPq8SIMn3UVWNP4uMfzCqxOtqLt9DvVecJRvekmbVDq3v_MMeQ=w2008-h1036-no?authuser=0"
+        }
+      ]
+    },
+    {
+      title: "Nexus Navigator",
+      group: "nn",
+      description:
+        "The Nexus Navigator is a tool I built to investigate interactions between relatively small sets of Twitter users to highlight patterns of behavior.  The interactions are presented as a graph in the center, with filters on the left, selected interactions on the right and a timeline at the bottom.",
+      img:
+        "https://lh3.googleusercontent.com/pw/AM-JKLVTF23SIdtx0AkrMR2Oa5Fxz2syZ3OGeA5tqvf_VTZ2g5IsBK5Bcks59QnAHT-FynUuohdneMMVRur6yjuMpRtoDYvLHje4Qb-qzXhjBJYPXtoWfGhcwB_7JYkIKlkdUogFrhGDRDC8L-bR7xbRaGQKFw=w1200-h976-no?authuser=0",
+      children: [
+        {
+          title: "Relationship Detail",
+          group: "nn",
+          description:
+            "The graph shows interactions between users.  Where possible users are bundled into groups that may be interactively expanded.  The interaction types and counts are encoded into edge shape, color and thickness.",
+          img:
+            "https://lh3.googleusercontent.com/S5kWU5T-aNfOhW7lei8saHYVk3vX7HUAEFZEKX7-d5bXG0mANdJavzzaurrmDg2vJnpRPpfyuP4E9aD4vWqlzLNZki3LodWjjzBCwDNtv39LTRuhxU2Rv6-Ox3w_Zw4A1UoxxsG-OMc=w870-h838-no"
+        },
+        {
+          title: "Event Timeline",
+          group: "nn",
+          description:
+            "Events are summarized into a timeline to show activity peaks. When the user hovers over graph nodes or edges, the relevant events are highlighted here.",
+          img:
+            "https://lh3.googleusercontent.com/NekXT3DPI8iNFLD7TI9nfo3HwUGTrzRPYKI17AVfe-8a3yhCSHxZHLW5OBFWjNGXIptN-nYN-ZR3qCy_04zC55jgXEgKEGpAKWZ8ztFcV1nCy17gHZhOFerlUQ7fJD2OCvc8XU_bOwc=w1194-h122-no"
+        }
+      ]
+    },
+    {
+      title: "US Presidential Candidate Twitter Buzz",
+      _link: "https://interactive.twitter.com/candidateRace16/",
+      group: "race",
+      description:
+        "This interactive was published leading up to the 2016 election, and updated regularly.  Initially, it shows candidates ranked by buzz on Twitter and indicates when each candidate dropped out of the race.  If you mouse over the primaries and debates you can see who participated in which.",
+      img:
+        "https://lh3.googleusercontent.com/pw/AM-JKLWmewBMgAkUenTt8IjhM0MDkhLlpITWtOiKmVUl7VfUw1D7sV81QECpszGN7UUlDpNFmbRpGWgm89E3WhcZbY9JQiIV42US_YVqMc8lmu_-DfqlOuXM_wivuTgtCqZLirItRWiUoD9UzfWDAG-_if7Lrw=w2316-h1344-no?authuser=0",
+      children: [
+        {
+          title: "A Proportional View",
+          _link:
+            "https://interactive.twitter.com/candidateRace16/?metric=proportion&state=AR&status=active",
+          group: "race",
+          description:
+            "The UI provides filters, selectors, and the option to animate the race.  Shown here are how the final three candidates fared in Arkansas, proportionally, rather than by rank.",
+          img:
+            "https://lh3.googleusercontent.com/pw/AM-JKLUIB35tPmVG9k4ySFLa36TgZ7XybL1T8Rl4719nkE1bTk-V3pdFUj_r3Qt1sP1Js2hZdad5C_kkWHXWMkmiAAeO6Bu9vXmO9KCE5zXcBPgXNiixI2plhijj2Emo-ngiRx33aVJxupx0pIJfwnjZmhHK9A=w2328-h1344-no?authuser=0"
+        }
+      ]
+    },
+    {
+      title: "User Cohort Flow",
+      group: "flow",
+      description:
+        "This chart shows the flow between different segments of Twitter users.  This internal tool was used to measure the health of various markets.  In this view, the numbers on the edges show the difference from one time period to the next.  It was also possible to show the difference between two countries to measure relative health.  The color-coding on the edges highlight segments which are in trouble.",
+      img:
+        "https://lh3.googleusercontent.com/pw/AM-JKLV-xsD0o03JEGPehjpwJtNGp9gd94hKahh7pkI9BjBke1sF63p6bPxVHE9xJUAd0njRNC9mlFY1eCabwTlbXn_wWOTyA6jspUMoUETrOe_N9Un18el-riZVnwm9jaY5AXyBcRZ64T2hNiTGt7YGKMz28Q=w1047-h685-no?authuser=0"
+    },
+    {
+      title: "Emoji Use on Twitter",
+      group: "fun",
+      description:
+        "I have had a chance to work on a number of more whimsical projects. For example, this is a prototype to show emoji use on Twitter, though it was not published.  A simple [ordered list](https://twitter.com/twitterdata/status/673905956909133824) was chosen instead.  I thought my treatment was fun if a little busy.",
+      img:
+        "https://lh3.googleusercontent.com/pw/AM-JKLX347sL2tcZcjizmSO18wKI0m96tFVrXaIhdbTKl274JssVyNbQfSF_CuRsfb6eHjxZl-nB8ymzFqdNTTqde-wfavznZRphnRZHCrHzoq80DnEbLt2MukIF_gt8a75vSm32kiEzgNeszqhwF1R5Chwu3Q=w799-h599-no?authuser=0",
+      children: [
+        {
+          title: "Twitter New Year's Eve 2012",
+          group: "fun",
+          link:
+            "https://blog.twitter.com/official/en_us/a/2013/celebrating-2013-in-the-global-town-square.html",
+          description:
+            'This static visualization overlays the tweets per second during New Year’s Day 2012 on a globe centered on the north pole.  It is arranged such that each "midnight spike" is aligned with the geography from which those tweets would likely come.  It was discussed here on Reddit\'s [Data Is Beautiful](https://www.reddit.com/r/dataisbeautiful/comments/15u2jy/tweets_per_second_on_nye_around_the_globe/).  I wish I had chosen better colors.',
+          img:
+            "https://lh3.googleusercontent.com/fjEuBlmZ_IYT_NItBIkG9Dj9az-j78EWrqWtrgIArmSFS62VdF3hF2jekq9BLU3ldRGoho4fDKXqG_xOe9shIyCTPLq8BllQDadB8Z3nhCCTWYeV9eyd6Nfz-wLYXISXJfpIToQXemE=s799-no"
+        },
+        {
+          title: "Live Geographic Aggregation",
+          group: "fun",
+          description:
+            "Here recent tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html) were grouped by hashtag or @handle, then rendered onto an ever zooming, scaling map.  Sporting events, conferences, earthquakes, and even rainbows would be highlighted.  A small time-series plot at the top of the screen showed the event trend.",
+          img:
+            "https://lh3.googleusercontent.com/L5mQFj78Na-FUyOYVrRJUaWqz2xfeopI1thF6gr6jlyqoZRsPh-LfA5Tal9vcURIJqB-CBbLbimU4RInAxxqzrqihuxcnzgo7K-PTdI92sk3MCg44nJDY5vhDg9mC3sddGPuJmhr544=w1011-h631-no"
+        }
+      ]
+    },
+    {
+      title: "Twitter Flight 2015",
+      link:
+        "https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html",
+      group: "flight",
+      description:
+        'This visualization, created for [Twitter Flight 2015](https://blog.twitter.com/developer/en_us/a/2015/join-us-at-twitter-flight-2015.html), used tweets from the [firehose](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose.html).  Hashtags and @handles mentioned together in the same tweet were used to create a weighted "co-mention" graph.  Periodically a [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) was extracted from the graph and used to update the display.',
+      img:
+        "https://lh3.googleusercontent.com/eoBp86v6tmp1hqJaKL4l-ybqHFZW7QPsbmLsMS0zEav-DUMOk0Eb4J5llI3cE-L7Ymw5ZKjr5LZQoy_0goGlmtBeq1W7GbUhN9Mp9qvtubcpMFGfE2r_FJt23sevX8sKjqNvSnC1ODg=w585-h544-no",
+      children: [
+        {
+          title: "With Cats",
+          group: "flight",
+          description:
+            "The [linked tweet](https://twitter.com/TwitterDev/status/656534589687500800) shows how the visualization looked live with tweets filtered with the hashtag [#CATS](https://twitter.com/search?q=%23CATS&src=typd).  The actual cats were added by [Twitter Comms](https://twitter.com/TwitterComms).",
+          link: "https://twitter.com/TwitterDev/status/656534589687500800",
+          img:
+            "https://lh3.googleusercontent.com/fL9i6gyFxqYfm9EqvKIcJNJn7mv_8QOzev56NXKO0aAiNp12QdoxZdj58xlLoEiTKMiG4nuA46U96hJalP6b99J7jFsUJbADVR7VSn5qT9mq1XawCH5eOdbg89VajXGuAUdVxY6B-3I=s320-no"
+        }
+      ]
+    }
+  ]
+})
+```
 
 # Master Automation
