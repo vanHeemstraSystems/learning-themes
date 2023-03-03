@@ -1,6 +1,6 @@
 [![Quarto Publish](https://github.com/vanHeemstraSystems/learning-themes/actions/workflows/publish.yml/badge.svg)](https://github.com/vanHeemstraSystems/learning-themes/actions/workflows/publish.yml)
-[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow_small.svg)](https:///pr.new/vanHeemstraSystems/stackblitz)
-[![Edit in Web Publisher](https://developer.stackblitz.com/img/edit_in_web_publisher_small.svg)](https://pr.new/github.com/vanHeemstraSystems/stackblitz/edit/main/README.md)
+[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow_small.svg)](https:///pr.new/vanHeemstraSystems/learning-themes)
+[![Edit in Web Publisher](https://developer.stackblitz.com/img/edit_in_web_publisher_small.svg)](https://pr.new/github.com/vanHeemstraSystems/learning-themes/edit/main/README.md)
 
 learning-themes
 # Learning - Themes
