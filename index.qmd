@@ -586,4 +586,34 @@ tree = ({
 })
 ```
 
+```{ojs}
+//| echo: false
+import { hostedOnThumbtools } from "@trebor/thumbtools"
+```
+
+```{ojs}
+//| echo: false
+import {color} from "@jashkenas/inputs"
+```
+
+```{ojs}
+//| echo: false
+d3 = require('d3@5')
+```
+
+```{ojs}
+//| echo: false
+_ = require('lodash')
+```
+
+```{ojs}
+//| echo: false
+WAMediaBox = {
+  const url = 'https://raw.githubusercontent.com/trebor/wa-mediabox/master/src/wa-mediabox.js';
+  const response = await fetch(url);
+  const blob = await response.blob();
+  return require(URL.createObjectURL(blob)).catch(() => window.WAMediaBox);
+}
+```
+
 # Master Automation
