@@ -431,11 +431,11 @@ graphData = {
 ```{ojs}
 //| echo: false
 tree = ({
-  title: "A Visualization Portfolio",
+  title: "Learning - Themes",
   group: "root",
   scale: 0.94,
   description:
-    "My name is [Robert Harris](https://docs.google.com/document/d/1Whdt8nYqjG_lzdgx6BvgIFcGutiXiqNs3F5SUVPMisA/edit?usp=sharing&authkey=CMnOiekK) and here you will find attached some of my visualization work created while working at [Twitter](https://twitter.com/trebor). You can peek under the hood and see how this page is constructed from an [Observable Notebook](https://observablehq.com/@trebor/portfolio) and published via [Thumbtools](https://thumbtools.org/).",
+    "Welcome to [Learning Themes](https://github.com/vanHeemstraSystems/learning-themes)",
   img:
     "https://lh3.googleusercontent.com/pw/AM-JKLXigBO-KBsubfpquO9BWa2OVsZX_KjsEhwTSnFgjF0CzQTDJVi8NYSA9wmKWxFNl-Ergz6nZXOXD9eBzCc9_cK7Z_1nqMc9SSovl1PWKJ0-vnEYL8VrPH6KHPHli5fzb7pOvKGbnabxUfyUmplmdEbdAw=w2240-h788-no",
   children: [
