@@ -431,7 +431,7 @@ graphData = {
 ```{ojs}
 //| echo: false
 tree = ({
-  title: "Learning Themes",
+  title: "A Visualization Portfolio",
   group: "root",
   scale: 0.94,
   description:
