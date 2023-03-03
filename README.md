@@ -8,3 +8,7 @@ Can be read as "Learning - Themes" at https://app.gitbook.com/o/mhLLz4wi0Rs2JPkB
 Can be browsed as "Learning - Themes" at https://vanheemstrasystems.github.io/learning-themes/
 
 Documentation of this repository is automatically done with Quarto using GitHub Actions as described at https://github.com/vanHeemstraSystems/quarto-to-github-pages/blob/main/300/300/README.md
+
+Based on "Convert Text to Image" at https://onlinetexttools.com/convert-text-to-image
+
+Based on "PNG to Base64" at https://base64.guru/converter/encode/image/png
