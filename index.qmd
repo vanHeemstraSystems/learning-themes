@@ -446,7 +446,7 @@ tree = ({
       description:
         "This report summarizes legal requests received by Twitter and is updated twice a year.  I created all the interactive visual components and engineered them to support future report data without code changes.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
+        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
       children: [
         {
           title: "Removal Requests",
