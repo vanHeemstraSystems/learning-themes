@@ -437,7 +437,7 @@ tree = ({
   description:
     "My name is [Robert Harris](https://docs.google.com/document/d/1Whdt8nYqjG_lzdgx6BvgIFcGutiXiqNs3F5SUVPMisA/edit?usp=sharing&authkey=CMnOiekK) and here you will find attached some of my visualization work created while working at [Twitter](https://twitter.com/trebor). You can peek under the hood and see how this page is constructed from an [Observable Notebook](https://observablehq.com/@trebor/portfolio) and published via [Thumbtools](https://thumbtools.org/).",
   img:
-    "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
+    "https://lh3.googleusercontent.com/pw/AM-JKLXigBO-KBsubfpquO9BWa2OVsZX_KjsEhwTSnFgjF0CzQTDJVi8NYSA9wmKWxFNl-Ergz6nZXOXD9eBzCc9_cK7Z_1nqMc9SSovl1PWKJ0-vnEYL8VrPH6KHPHli5fzb7pOvKGbnabxUfyUmplmdEbdAw=w2240-h788-no",
   children: [
     {
       title: "Transparency Report",
