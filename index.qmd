@@ -433,7 +433,7 @@ graphData = {
 tree = ({
   title: "Learning - Themes",
   group: "root",
-  scale: 0.50,
+  scale: 0.94,
   description:
     "Welcome to [Learning Themes](https://github.com/vanHeemstraSystems/learning-themes)",
   img:
