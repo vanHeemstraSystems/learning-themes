@@ -8,7 +8,135 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{ojs}
 //| echo: false
-md`### Themes`
+__page = hostedOnThumbtools()
+  ? pageRenderer(graphData, width, height, false)
+  : pageRenderer(graphData, width, 800, true)
 ```
+
+```{ojs}
+//| echo: false
+viewof linkColor = color({
+  value: "#aaaaaa",
+  title: "Link Color"
+})
+```
+
+```{ojs}
+//| echo: false
+viewof backgroundColor = color({
+  // value: d3.color("rgb(253, 242, 208)").hex(),
+  value: "#fff7e0", // "#f7f7f7", //"#f2f0e6",
+  title: "Background Color"
+})
+```
+
+```{ojs}
+//| echo: false
+depthSizeScale = d3
+  .scalePow()
+  .exponent(0.7)
+  .domain([0, maxDepth])
+  .range([1, 0.6])
+```
+
+```{ojs}
+//| echo: false
+strokeWidth = 4
+```
+
+```{ojs}
+//| echo: false
+imageSize = 140
+```
+
+```{ojs}
+//| echo: false
+depthThickScale = d3.scaleLinear().domain([0, maxDepth - 1]).range([10, 5])
+```
+
+```{ojs}
+//| echo: false
+pageRenderer = (data, width, height, isTest = false) => {
+  const svg = DOM.svg(width, height);
+  
+  d3.select(svg)
+    .style('width', '100%')
+    .style('height', '100%');
+  
+  const style = isTest 
+    ? 'height: ${height / 4}px;'
+    : `
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+    `;
+  const container = html`
+    <div style="
+      font-family: 'Montserrat', sans-serif;
+      background-color: ${backgroundColor};
+      ${style};
+    ">
+      <link rel='stylesheet' href='https://unpkg.com/wa-mediabox@1.0.1/dist/wa-mediabox.min.css'/> 
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <style>
+        .__wa-mediabox-open {
+          visibility: hidden;
+        }
+
+        .wa-mediabox-frame .wa-mediabox-close {
+        	right: 4px;
+        	top: 4px;
+        	width: 36px;
+        	height: 36px;
+          transform: scale(${isMoble ? 3 : 0.9});
+        } 
+
+        .wa-mediabox-frame {
+          top: 40%;
+          transform: scale(0.904);
+        }
+
+        .wa-mediabox-frame, .wa-mediabox-container {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        } 
+        .wa-mediabox-title {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 16px;
+          background: ${backgroundColor}; 
+          color: #555;
+          top: 100%;
+          bottom: auto;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+
+        .wa-mediabox-frame.loaded.has-title .wa-mediabox-title {
+          padding: 4px 14px 20px 14px;
+          user-select: all;
+        }
+
+        .wa-mediabox-title a:link, .wa-mediabox-title a:visited {
+          text-decoration: none;
+          cursor: pointer;
+          font-weight: bold;
+          color: rgb(72, 128, 184);
+        }
+
+      </style>
+
+      ${svg}
+    </div>`;
+
+  renderGraph(data, d3.select(svg), width, height);
+  return container;
+}
+```
+
+
+
+
 
 # Master Automation
