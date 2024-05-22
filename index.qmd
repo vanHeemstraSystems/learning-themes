@@ -478,6 +478,7 @@ tree = ({
     },
     {
       title: "B: Application Programming Interfaces",
+      link: "https://vanheemstrasystems.github.io/learning-application-programming-interfaces",
       group: "application-programming-interfaces",
       description:
         "The Nexus Navigator is a tool I built to investigate interactions between relatively small sets of Twitter users to highlight patterns of behavior.  The interactions are presented as a graph in the center, with filters on the left, selected interactions on the right and a timeline at the bottom.",
@@ -936,3 +937,4 @@ WAMediaBox = {
 
 # Master Automation
 # Master Application Programming Interfaces
+# Master CI/CD
