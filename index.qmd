@@ -935,4 +935,4 @@ WAMediaBox = {
 ```
 
 # Master Automation
-# Master B...
+# Master Application Programming Interfaces
