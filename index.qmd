@@ -446,7 +446,7 @@ tree = ({
       description:
         "About Automation.",
       img:
-        "https://clipart-library.com/images/pTodqMqAc.jpg?authuser=0",
+        "https://github.com/vanHeemstraSystems/learning-themes/blob/main/images/tat-on-white-458x458-trim.png?raw=true?authuser=0",
       children: [
         {
           title: "Home Automation",
