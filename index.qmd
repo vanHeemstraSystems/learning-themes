@@ -937,12 +937,12 @@ WAMediaBox = {
 
 # Master Automation
 
-[Link](https://vanheemstrasystems.github.io/learning-automation)
+[Learning Automation](https://vanheemstrasystems.github.io/learning-automation)
 
 # Master Application Programming Interfaces
 
-https://vanheemstrasystems.github.io/learning-application-programming-interfaces
+[Learning Application Programming Interfaces](https://vanheemstrasystems.github.io/learning-application-programming-interfaces)
 
 # Master CI/CD
 
-https://vanheemstrasystems.github.io/learning-ci-cd
+[Learning CI/CD](https://vanheemstrasystems.github.io/learning-ci-cd)
