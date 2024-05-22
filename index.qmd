@@ -446,7 +446,7 @@ tree = ({
       description:
         "About Automation.",
       img:
-        "https://lh3.googleusercontent.com/pw/AM-JKLXyIIYcSSkvC6CGp7qo4UDL7o-dN2zrL215tl-kVGilitOa-Es_Dt8WrOq4VqKk_fLb9KdTBLaD8ztWYgDDZmH54ve6NLtl73V8ZHikjSGDMUS-tMVH8eqLByBB7xBtv-lpjj3JdvwZpuOSput46gPHNg=s458-no?authuser=0",
+        "https://clipart-library.com/images/pTodqMqAc.jpg",
       children: [
         {
           title: "Home Automation",
